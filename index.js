@@ -6,3 +6,4 @@ console.log("Add signin feature");
 console.log("Add dark mode");
 
 console.log("Form submitted");
+console.log("Blog added");
