@@ -3,7 +3,7 @@ name: Run Javascript
 on:
   push:
     branches:
-      -main
+      -master
 
 jobs:
   run-js:
