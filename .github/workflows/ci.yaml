@@ -15,5 +15,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Read Secret
+        env:
+          NAME: ${{ secrets.MY_NAME }}
+        run: echo "Hello $NAME"
 
       - run: node index.js
