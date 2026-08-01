@@ -9,15 +9,18 @@ jobs:
   run-js:
     runs-on: ubuntu-latest
 
+    env:
+      NAME: ${{ secrets.MY_NAME }}
+
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: Read Secret
-        env:
-          NAME: ${{ secrets.MY_NAME }}
         run: echo "Hello $NAME"
 
-      - run: node index.js
+      - name: Run Node App
+        run: node index.js
